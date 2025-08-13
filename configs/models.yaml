@@ -1,0 +1,26 @@
+models:
+  gptoss20b:
+    base_hf: "openai/gpt-oss-20b"       # TODO: แก้เป็น repo จริงบน HF ถ้าชื่อแตกต่าง
+    base_ollama: "gpt-oss:20b"
+    template: "chatml"
+    seq_len: 512
+    lora_r: 8
+    lora_alpha: 16
+    lora_dropout: 0.05
+    batch_size: 1
+    grad_accum: 8
+    epochs: 2
+    lr: 2.0e-4
+
+  mistral7b:
+    base_hf: "mistralai/Mistral-7B-Instruct-v0.3"
+    base_ollama: "mistral:7b-instruct"
+    template: "chatml"
+    seq_len: 512
+    lora_r: 8
+    lora_alpha: 16
+    lora_dropout: 0.05
+    batch_size: 1
+    grad_accum: 8
+    epochs: 1
+    lr: 2.0e-4
